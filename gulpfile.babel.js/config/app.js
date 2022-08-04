@@ -18,6 +18,6 @@ export default {
 	},
 
 	fonter	: {
-		formats: ["ttf", "woff", "eot", "svg"]
+		formats: ["ttf", "otf", "woff", "eot", "svg"]
 	}
 }
