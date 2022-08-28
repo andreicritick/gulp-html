@@ -7,16 +7,24 @@
 <br />
 
 ### 1. Download archive or clone these files with:
-```git clone https://github.com/andreicritick/gulp-html.git```
+```
+git clone https://github.com/andreicritick/gulp-html.git
+```
 
 ### 2. Install dependencies:
-```npm i```
+```
+npm i
+```
 
 ### 3. Start development:
-```npm start```
+```
+npm start
+```
 
 ### 4. Production build:
-```npm run build```
+```
+npm run build
+```
 
 ### 5. You are awesome! Good luck! ;-)
 
