@@ -28,19 +28,12 @@ export default {
 		dest	: pathDest + '/img'
 	},
 
-	fonts	: {
-		src		: pathSrc + '/fonts/**/*.{eot,ttf,otfotc,ttc,woff,woff2,svg}',
-		watch	: pathSrc + '/fonts/**/*.{eot,ttf,otfotc,ttc,woff,woff2,svg}',
-		dest	: pathDest + '/fonts'
-	},
-
 	del		: {
 		clean	: [
 			`${pathDest}/*.html`,
 			`${pathDest}/js/**/*`,
 			`${pathDest}/scss/**/*`,
-			`${pathDest}/img/**/*`,
-			`${pathDest}/fonts/**/*`
+			`${pathDest}/img/**/*`
 		]
 	}
 };

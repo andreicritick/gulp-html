@@ -15,9 +15,5 @@ export default {
 
 	imagemin: {
 		verbose: true
-	},
-
-	fonter	: {
-		formats: ["ttf", "otf", "woff", "eot", "svg"]
 	}
 }

@@ -18,7 +18,6 @@ import clear from './tasks/clear'
 import html from './tasks/html'
 import js from './tasks/js'
 import img from './tasks/img'
-import fonts from './tasks/fonts'
 
 // Config.
 import path from './config/path'
@@ -40,8 +39,8 @@ const scss = () => {
 	return gulp.src( path.scss.src, { sourcemaps: app.isDev } )
 		.pipe( plumber( {
 			errorHandler: notify.onError( error => ( {
-				title	: 'ПРОЁБ В SCSS',
-				message	: 'Суть проёба: ' + error.message
+				title	: 'ERROR IN SCSS',
+				message	: 'Details: ' + error.message
 			} ) )
 		} ) )
 		.pipe( sass() )
@@ -60,12 +59,11 @@ const watcher = () => {
 	gulp.watch( path.scss.watch, scss )
 	gulp.watch( path.js.watch, js ).on( 'all', browserSync.reload )
 	gulp.watch( path.img.watch, img ).on( 'all', browserSync.reload )
-	gulp.watch( path.fonts.watch, fonts ).on( 'all', browserSync.reload )
 }
 
 const build = gulp.series(
 	clear,
-	gulp.parallel( html, scss, js, img, fonts )
+	gulp.parallel( html, scss, js, img )
 )
 
 const dev = gulp.series(

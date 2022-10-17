@@ -118,13 +118,7 @@ Inside your `public` directory. It will appear after starting development or aft
 <hr />
 <br />
 
-### 5. Fonts
-Fonts converter by <a href="https://www.npmjs.com/package/gulp-fonter">Gulp-fonter</a>.
-
-<hr />
-<br />
-
-### 6. Errors
+### 5. Errors
 Pop-up system notifications are added - now you will not waste your time searching for error.
 
 <hr />
