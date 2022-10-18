@@ -22,6 +22,8 @@ import img from './tasks/img'
 // Config.
 import path from './config/path'
 import app from './config/app'
+import gulpIf from "gulp-if";
+import imagemin from "gulp-imagemin";
 
 const sass = gulpSass( dartSass )
 
@@ -49,7 +51,7 @@ const scss = () => {
 		.pipe( shorthand() )
 		.pipe( groupCssMediaQueries() )
 		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( csso() )
+		.pipe( gulpIf( app.isProd, csso() ) )
 		.pipe( gulp.dest( path.scss.dest, { sourcemaps: app.isDev } ) )
 		.pipe( browserSync.stream() )
 }
